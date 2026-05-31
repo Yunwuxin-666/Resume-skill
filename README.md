@@ -77,6 +77,8 @@ It also adapts tone and section labels by language and market context:
 
 黑白、简洁、正式，是默认模板，适合大多数通用岗位。
 
+![墨线经典模板效果图](docs/images/template-moxian-classic.png)
+
 适合产出：
 
 - AI Designer / AIGC Visual Designer resumes
@@ -94,6 +96,8 @@ It also adapts tone and section labels by language and market context:
 
 适合运营、内容、品牌、电商、教育和增长类岗位，表达更偏业务结果和执行动作。
 
+![运营简洁模板效果图](docs/images/template-ziteng-ops.png)
+
 适合产出：
 
 - Content operations / user operations / campaign operations resumes
@@ -110,6 +114,8 @@ It also adapts tone and section labels by language and market context:
 ### 3. 工程专业
 
 适合工程、算法、AI 工程、半导体、研发和技术岗位，表达更强调技术栈、项目细节和指标。
+
+![工程专业模板效果图](docs/images/template-lanbiao-engineering.png)
 
 适合产出：
 
@@ -161,6 +167,11 @@ Resume-skill/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── docs/
+│   └── images/
+│       ├── template-moxian-classic.png
+│       ├── template-ziteng-ops.png
+│       └── template-lanbiao-engineering.png
 └── Resume-skill/
     ├── SKILL.md
     └── templates/
