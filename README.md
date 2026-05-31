@@ -73,62 +73,11 @@ It also adapts tone and section labels by language and market context:
 
 项目内置 3 个模板家族，每个家族包含靠右头像、居中头像等变体。
 
-### 1. 墨线经典
-
-黑白、简洁、正式，是默认模板，适合大多数通用岗位。
-
-![墨线经典模板效果图](docs/images/template-moxian-classic.png)
-
-适合产出：
-
-- AI Designer / AIGC Visual Designer resumes
-- AI Product Manager / LLM Application Product Manager resumes
-- Operations, content, marketing, and brand resumes
-- Formal one-page resumes that emphasize structured experience and readable density
-
-模板文件：
-
-- `Resume-skill/templates/resume-template-01-moxian-classic.html`
-- `Resume-skill/templates/resume-template-01-moxian-classic-center.html`
-- `Resume-skill/templates/resume-template-02-moxian-classic-right.html`
-
-### 2. 运营简洁
-
-适合运营、内容、品牌、电商、教育和增长类岗位，表达更偏业务结果和执行动作。
-
-![运营简洁模板效果图](docs/images/template-ziteng-ops.png)
-
-适合产出：
-
-- Content operations / user operations / campaign operations resumes
-- Social media operations / e-commerce operations resumes
-- Brand marketing / growth / course operations resumes
-- Resumes emphasizing campaigns, content growth, conversion metrics, and channel execution
-
-模板文件：
-
-- `Resume-skill/templates/resume-template-02-ziteng-ops.html`
-- `Resume-skill/templates/resume-template-03-ziteng-ops-center.html`
-- `Resume-skill/templates/resume-template-04-ziteng-ops-right.html`
-
-### 3. 工程专业
-
-适合工程、算法、AI 工程、半导体、研发和技术岗位，表达更强调技术栈、项目细节和指标。
-
-![工程专业模板效果图](docs/images/template-lanbiao-engineering.png)
-
-适合产出：
-
-- Algorithm Engineer / Machine Learning Engineer / Recommendation Engineer resumes
-- AI Image Engineer / ComfyUI Workflow Engineer resumes
-- Backend, data, R&D, semiconductor process, and technical resumes
-- Resumes emphasizing models, systems, experiments, performance, yield, accuracy, and A/B testing
-
-模板文件：
-
-- `Resume-skill/templates/resume-template-03-lanbiao-engineering.html`
-- `Resume-skill/templates/resume-template-05-lanbiao-engineering-center.html`
-- `Resume-skill/templates/resume-template-06-lanbiao-engineering-right.html`
+| 模板家族 | 适合产出 | 模板文件 | 效果图 |
+|---|---|---|---|
+| **墨线经典**<br>黑白、简洁、正式，是默认模板，适合大多数通用岗位。 | AI Designer / AIGC Visual Designer<br>AI Product Manager / LLM Application PM<br>Operations / content / marketing / brand roles | `resume-template-01-moxian-classic.html`<br>`resume-template-01-moxian-classic-center.html`<br>`resume-template-02-moxian-classic-right.html` | <img src="docs/images/template-moxian-classic.png" width="220" alt="墨线经典模板效果图"> |
+| **运营简洁**<br>黑白分节线，适合运营、内容、品牌、电商、教育和增长类岗位。 | Content / user / campaign operations<br>Social media / e-commerce operations<br>Brand marketing / growth / course operations | `resume-template-02-ziteng-ops.html`<br>`resume-template-03-ziteng-ops-center.html`<br>`resume-template-04-ziteng-ops-right.html` | <img src="docs/images/template-ziteng-ops.png" width="220" alt="运营简洁模板效果图"> |
+| **工程专业**<br>黑白专业分节，适合工程、算法、AI 工程、研发和技术岗位。 | Algorithm / machine learning / recommendation engineer<br>AI image / ComfyUI workflow engineer<br>Backend / data / R&D / technical roles | `resume-template-03-lanbiao-engineering.html`<br>`resume-template-05-lanbiao-engineering-center.html`<br>`resume-template-06-lanbiao-engineering-right.html` | <img src="docs/images/template-lanbiao-engineering.png" width="220" alt="工程专业模板效果图"> |
 
 ---
 
