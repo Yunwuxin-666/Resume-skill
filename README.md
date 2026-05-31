@@ -1,13 +1,13 @@
-# 简历.skill
+# Resume Skill / 简历.skill
 
-> *像严厉面试官一样审稿，像咨询顾问一样重构，最后输出一份能投递的 A4 简历。*
+> *Review like a strict interviewer. Rewrite like a consultant. Export a polished A4 resume in Chinese, English, bilingual, or other localized formats.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Compatible-green)](https://agentskills.io)
 [![Codex](https://img.shields.io/badge/Codex-Skill-blue)](Resume-skill/SKILL.md)
 [![Templates](https://img.shields.io/badge/Templates-3%20Families-black)](#三类模板)
 
-**简历.skill** 是一套中文简历优化与 A4 HTML 简历生成规则。它不是只做润色，而是先用严厉面试官视角审稿，再按目标岗位重排经历、补强项目、强化量化指标，最后套入可打印的一页或两页 HTML 简历模板。
+**Resume Skill / 简历.skill** is a multilingual resume optimization and A4 HTML resume generation skill. It can work with Chinese, English, bilingual, and localized resume outputs. It does not simply polish wording; it reviews the resume like a strict interviewer, restructures experience for the target role, strengthens project evidence and measurable impact, then exports a printable one-page or two-page HTML resume.
 
 ```bash
 npx skills add Yunwuxin-666/Resume-skill
@@ -19,11 +19,11 @@ npx skills add Yunwuxin-666/Resume-skill
 
 很多简历的问题不是“不够好看”，而是：
 
-- 经历写得像职责清单，看不出候选人到底做了什么
-- 项目没有背景、方法、结果，面试官追问两层就断
-- 指标和成果缺少因果链，像编出来的
-- 岗位重点不清，AI、产品、设计、工程表达混在一起
-- 版式不是太空，就是太挤，无法稳定输出 A4
+- Experience reads like a responsibility list, not evidence of real contribution
+- Projects lack context, methods, outcomes, and interview-ready depth
+- Metrics are disconnected from actions and look unconvincing
+- Role positioning is unclear across AI, product, design, engineering, operations, or business tracks
+- Layout is either too empty or too dense, making A4 output unstable
 
 简历.skill 把这些问题拆成三件事：
 
@@ -31,19 +31,26 @@ npx skills add Yunwuxin-666/Resume-skill
 2. **重写**：按岗位重组工作经历、项目经历和技能结构
 3. **排版**：按四级优先级输出 A4 HTML 简历
 
+It also adapts tone and section labels by language and market context:
+
+- Chinese resume: `个人总结`、`工作经历`、`项目经历`、`专业技能`
+- English resume: `Summary`、`Experience`、`Projects`、`Skills`
+- Bilingual resume: Chinese and English section labels or paired content blocks when requested
+- Localized resume: adjust wording, dates, contact fields, and role naming for the target country or hiring context
+
 ---
 
 ## 可产出的内容
 
-根据用户上传的简历、粘贴的经历、目标岗位，或完全从零虚构的候选人信息，可以生成：
+根据用户上传的简历、粘贴的经历、目标岗位，或完全从零虚构的候选人信息，可以生成中文、英文、双语或本地化版本：
 
-- **个人信息栏**：姓名、电话、邮箱、求职岗位、头像区域
-- **教育经历**：学校、专业、学历、起止时间，支持本科 / 硕士 / 博士多段展示
-- **个人总结**：围绕目标岗位提炼候选人定位、核心能力和可追问亮点
-- **工作经历**：按时间倒序重写公司、岗位、部门、地点、职责、方法、工具和结果
-- **项目经历**：使用“项目简介 / 项目细节 / 项目成果”结构，强化业务背景、技术动作和量化指标
-- **专业技能**：按岗位归纳工具链、技术栈、方法论和交付能力
-- **荣誉奖项**：展示奖学金、竞赛、认证、语言能力、作品集、论文或开源成果
+- **Profile / 个人信息**：name, phone, email, target role, avatar area
+- **Education / 教育经历**：school, major, degree, date range, multiple degree levels
+- **Summary / 个人总结**：candidate positioning, core strengths, interview-ready highlights
+- **Experience / 工作经历**：company, role, team, location, responsibilities, methods, tools, and outcomes
+- **Projects / 项目经历**：project context, technical actions, business value, and measurable results
+- **Skills / 专业技能**：toolchain, technical stack, methodology, delivery capability
+- **Awards / 荣誉奖项**：scholarships, competitions, certificates, language ability, portfolio, papers, open-source work
 
 ---
 
@@ -72,10 +79,10 @@ npx skills add Yunwuxin-666/Resume-skill
 
 适合产出：
 
-- AI 设计师 / AIGC 视觉设计师简历
-- AI 产品经理 / 大模型应用产品经理简历
-- 运营、内容、市场、品牌类简历
-- 需要正式投递、阅读密度适中、强调经历结构的单页简历
+- AI Designer / AIGC Visual Designer resumes
+- AI Product Manager / LLM Application Product Manager resumes
+- Operations, content, marketing, and brand resumes
+- Formal one-page resumes that emphasize structured experience and readable density
 
 模板文件：
 
@@ -89,10 +96,10 @@ npx skills add Yunwuxin-666/Resume-skill
 
 适合产出：
 
-- 内容运营 / 用户运营 / 活动运营简历
-- 小红书运营 / 新媒体运营 / 电商运营简历
-- 品牌营销 / 增长运营 / 课程运营简历
-- 强调活动策划、内容增长、转化指标、渠道执行的简历
+- Content operations / user operations / campaign operations resumes
+- Social media operations / e-commerce operations resumes
+- Brand marketing / growth / course operations resumes
+- Resumes emphasizing campaigns, content growth, conversion metrics, and channel execution
 
 模板文件：
 
@@ -106,10 +113,10 @@ npx skills add Yunwuxin-666/Resume-skill
 
 适合产出：
 
-- 算法工程师 / 机器学习工程师 / 推荐算法工程师简历
-- AI 图像工程师 / ComfyUI 工作流工程师简历
-- 后端、数据、工程研发、半导体工艺类简历
-- 强调模型、系统、实验、性能、良率、准确率、A/B 测试等技术指标的简历
+- Algorithm Engineer / Machine Learning Engineer / Recommendation Engineer resumes
+- AI Image Engineer / ComfyUI Workflow Engineer resumes
+- Backend, data, R&D, semiconductor process, and technical resumes
+- Resumes emphasizing models, systems, experiments, performance, yield, accuracy, and A/B testing
 
 模板文件：
 
@@ -123,6 +130,14 @@ npx skills add Yunwuxin-666/Resume-skill
 
 ```text
 用我的简历优化成 AI 设计师岗位，一页宽松铺满。
+```
+
+```text
+Create an English one-page resume for a machine learning engineer, using the centered-avatar template.
+```
+
+```text
+输出一份中英双语简历，目标岗位是 AI Product Designer。
 ```
 
 ```text
