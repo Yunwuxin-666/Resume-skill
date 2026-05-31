@@ -1,0 +1,365 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>简历模板单页预览</title>
+  <style>
+    :root {
+      --paper-w: 210mm;
+      --paper-h: 297mm;
+      --ink: #111;
+      --blue: #111;
+      --soft-blue: #e1e1e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: #d8dce3;
+      color: var(--ink);
+      font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: grid;
+      place-items: start center;
+      padding: 28px 12px 42px;
+    }
+
+    .page {
+      position: relative;
+      width: var(--paper-w);
+      min-height: var(--paper-h);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 14px 36px rgba(20, 28, 44, .22);
+    }
+
+    .wave {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .page-inner {
+      position: relative;
+      z-index: 2;
+      padding: 13mm 11mm 13mm;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 22mm;
+      gap: 20mm;
+      align-items: start;
+      min-height: 30mm;
+    }
+
+    h1 {
+      margin: 2mm 0 0;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .contact,
+    .role {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .role {
+      margin-top: 2px;
+    }
+
+    .avatar {
+      width: 22mm;
+      height: 27mm;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 52% 25%, #fff7f2 0 10%, transparent 10.5%),
+        radial-gradient(circle at 50% 35%, #f0c8b3 0 17%, transparent 17.5%),
+        radial-gradient(ellipse at 50% 34%, #171a21 0 27%, transparent 27.5%),
+        linear-gradient(145deg, #172134 0 43%, #233a66 44% 100%);
+      border: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .avatar::after {
+      content: "";
+      width: 48%;
+      height: 34%;
+      margin-top: 52%;
+      background: linear-gradient(90deg, #f8f8f8 0 34%, #b6152d 35% 52%, #f8f8f8 53% 100%);
+      clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%);
+    }
+
+    .section {
+      margin-top: 8px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 7px;
+      color: var(--blue);
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .section-icon {
+      flex: 0 0 5.4mm;
+      width: 5.4mm;
+      height: 5.4mm;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+
+    .section-icon svg {
+      width: 3.15mm;
+      height: 3.15mm;
+      stroke: currentColor;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .section-title::after {
+      content: "";
+      height: .25mm;
+      flex: 1;
+      background: var(--soft-blue);
+    }
+
+    .summary {
+      margin: 8px 0 12px;
+      font-size: 12.5px;
+      line-height: 1.58;
+      text-align: justify;
+    }
+
+    .entry {
+      margin: 7px 0 8px;
+      break-inside: avoid;
+    }
+
+    .entry-head,
+    .entry-sub {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    .entry-head {
+      font-size: 12.7px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .entry-sub {
+      margin-top: 2px;
+      color: #222;
+      font-size: 12.3px;
+      line-height: 1.45;
+    }
+
+    ul {
+      margin: 5px 0 0;
+      padding-left: 19px;
+    }
+
+    li {
+      margin: 3.8px 0;
+      padding-left: 3px;
+      font-size: 11.8px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .awards {
+      margin: 6px 0 0;
+      font-size: 12.8px;
+      line-height: 1.62;
+    }
+
+    .strong {
+      font-weight: 800;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        display: block;
+        padding: 0;
+        background: #fff;
+      }
+
+      .page {
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 16px 8px 28px;
+      }
+
+      .page {
+        width: min(100%, var(--paper-w));
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <svg class="wave" viewBox="0 0 794 1123" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="#e2e6ec" stroke-width="1">
+        <circle cx="82" cy="68" r="95" />
+        <circle cx="166" cy="74" r="42" />
+        <circle cx="196" cy="102" r="62" />
+        <path d="M0 120 L300 0" />
+      </g>
+    </svg>
+
+    <div class="page-inner">
+      <header class="hero">
+        <div>
+          <h1>陈媛媛Abbey</h1>
+          <div class="contact">188-8888-8888&nbsp;&nbsp;|&nbsp;&nbsp;abbey@wondercv.com</div>
+          <div class="role">工艺整合研发工程师</div>
+        </div>
+        <div class="avatar" aria-label="头像占位"></div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z" /><path d="M16 4v4h4" /><path d="M8 12h8" /><path d="M8 16h6" /></svg>
+          </span>
+          个人总结
+        </h2>
+        <p class="summary">微电子与集成电路专业硕士，具备扎实的BCD工艺理论基础与55nm-90nm节点仿真经验。在校期间主导多项LDMOS工艺优化课题，擅长运用DOE方法拆解良率异常，具备跨实验室协作与流片测试全流程实践能力。致力于将学术研究成果转化为工艺平台优化方案，快速适应半导体产业环境。</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14" /><path d="M9 21v-6h6v6" /><path d="M8 10h.01" /><path d="M12 10h.01" /><path d="M16 10h.01" /></svg>
+          </span>
+          工作经历
+        </h2>
+        <div class="entry">
+          <div class="entry-head"><span>某头部半导体企业</span><span></span></div>
+          <div class="entry-sub"><span>工艺整合研发工程师（实习） 工艺整合部</span><span>北京</span></div>
+          <ul>
+            <li>参与55nm BCD工艺平台研发，协助PIE团队完成新工艺模块的流片验证与数据收集，确保研发进度符合项目里程碑。</li>
+            <li>针对LDMOS器件SOA可靠性异常，运用DOE实验设计方法拆解关键变量，提出栅极氧化层厚度优化方案，协助团队将良率提升3.5%。</li>
+            <li>协调跨部门资源，整合设备部与测试部数据，建立异常问题追踪看板，缩短流片测试异常响应时间20%。</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span>某芯片设计公司</span><span></span></div>
+          <div class="entry-sub"><span>工艺开发助理（实习） 工艺开发部</span><span>北京</span></div>
+          <ul>
+            <li>协助主导低压6-12V LDMOS工艺平台优化项目，负责工艺参数监控与SPC控制计划落地执行。</li>
+            <li>深入分析流片测试数据，定位关键缺陷模式，通过调整离子注入能量与剂量，有效改善器件导通电阻特性。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /><path d="M7 5v14" /><path d="M17 5v14" /></svg>
+          </span>
+          项目经历
+        </h2>
+        <div class="entry">
+          <div class="entry-head"><span>55nm BCD工艺LDMOS器件可靠性优化项目</span><span></span></div>
+          <div class="entry-sub"><span>工艺整合研发工程师（项目组长）</span><span>北京</span></div>
+          <ul>
+            <li>针对低压LDMOS器件在高压应力下SOA性能下降问题，主导全流程工艺优化研究，从器件物理角度拆解失效机理。</li>
+            <li>设计多组对比实验，结合TCAD仿真与实测数据，成功定位栅极边缘电场集中为关键诱因，提出场板结构优化方案。</li>
+            <li>推动控制计划落地，制定关键工艺参数监控指标，协助产线将器件可靠性测试通过率从85%提升至96%。</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span>6-12V LDMOS工艺平台开发与良率提升专项</span><span></span></div>
+          <div class="entry-sub"><span>工艺整合研发工程师（核心成员）</span><span>北京</span></div>
+          <ul>
+            <li>参与新工艺平台开发，负责离子注入与退火工艺窗口探索，解决多批次流片良率波动问题。</li>
+            <li>利用统计过程控制工具分析工艺数据，识别关键变异源，实现关键尺寸控制精度提升15%。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0" /><path d="M3 21a7 7 0 0 1 18 0" /><path d="M17 8a3 3 0 0 1 3 3" /><path d="M7 8a3 3 0 0 0-3 3" /></svg>
+          </span>
+          社团和组织经历
+        </h2>
+        <div class="entry">
+          <div class="entry-head"><span>微电子研究生创新协会</span><span></span></div>
+          <div class="entry-sub"><span>技术部部长 技术部</span><span>北京</span></div>
+          <ul>
+            <li>策划并执行“半导体前沿技术”系列讲座，邀请行业专家分享BCD工艺与LDMOS技术趋势，覆盖全院300+师生。</li>
+            <li>组织跨校联合技术竞赛，协调参赛队伍进行工艺仿真与流片方案设计，培养团队问题拆解与协作开发能力。</li>
+            <li>建立实验室设备共享与预约机制，优化资源分配流程，使设备利用率提升25%。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 21h8" /><path d="M12 17v4" /><path d="M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M7 7H4a3 3 0 0 0 3 3" /><path d="M17 7h3a3 3 0 0 1-3 3" /></svg>
+          </span>
+          荣誉奖项
+        </h2>
+        <div class="awards">全国研究生电子设计竞赛一等奖<br>校级优秀研究生奖学金（前5%）<br>IEEE Transactions on Electron Devices 论文录用</div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span class="section-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v18" /><path d="M5 8h14" /><path d="M5 16h14" /><path d="M8 5l-3 3 3 3" /><path d="M16 13l3 3-3 3" /></svg>
+          </span>
+          其他
+        </h2>
+        <ul>
+          <li><span class="strong">技能：</span>BCD工艺、TD/PIE流程、LDMOS器件物理、SOA可靠性改善、TCAD仿真（Sentaurus/Silvaco）、DOE实验设计、SPC统计过程控制、良率提升分析、Python/Matlab、Office办公软件</li>
+          <li><span class="strong">语言：</span>CET-6（580分），专业英语读写流利，可熟练阅读英文技术文档与IEEE论文</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</body>
+</html>
+
+

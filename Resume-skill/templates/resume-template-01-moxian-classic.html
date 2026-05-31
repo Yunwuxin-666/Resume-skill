@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>墨线经典 - 简历模板</title>
+  <style>
+    :root {
+      --paper-w: 210mm;
+      --paper-h: 297mm;
+      --ink: #111;
+      --soft: #f1f1f1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: start center;
+      padding: 28px 12px 42px;
+      background: #d8dce3;
+      color: var(--ink);
+      font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      position: relative;
+      width: var(--paper-w);
+      min-height: var(--paper-h);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 14px 36px rgba(20, 28, 44, .22);
+    }
+
+    .wave {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .78;
+    }
+
+    .page-inner {
+      position: relative;
+      z-index: 2;
+      padding: 14mm 13mm 14mm;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 25mm;
+      height: 25mm;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 52% 25%, #fff7f2 0 10%, transparent 10.5%),
+        radial-gradient(circle at 50% 35%, #f0c8b3 0 17%, transparent 17.5%),
+        radial-gradient(ellipse at 50% 34%, #171a21 0 27%, transparent 27.5%),
+        linear-gradient(145deg, #172134 0 43%, #233a66 44% 100%);
+      border: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .avatar::after {
+      content: "";
+      width: 48%;
+      height: 34%;
+      margin-top: 52%;
+      background: linear-gradient(90deg, #f8f8f8 0 34%, #b6152d 35% 52%, #f8f8f8 53% 100%);
+      clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .contact {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .section { margin-top: 9px; }
+
+    .section-title {
+      height: 8mm;
+      display: flex;
+      align-items: center;
+      margin: 0 0 7px;
+      padding-left: 8mm;
+      background: var(--soft);
+      border-left: 1.4mm solid #000;
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .summary {
+      margin: 8px 0 12px;
+      font-size: 13.2px;
+      line-height: 1.62;
+      text-align: justify;
+    }
+
+    .entry {
+      margin: 7px 0 8px;
+      break-inside: avoid;
+    }
+
+    .entry-head,
+    .entry-sub {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    .entry-head {
+      font-size: 13.3px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .entry-sub {
+      margin-top: 2px;
+      color: #222;
+      font-size: 12.8px;
+      line-height: 1.45;
+    }
+
+    ul {
+      margin: 5px 0 0;
+      padding-left: 19px;
+    }
+
+    li {
+      margin: 3.8px 0;
+      padding-left: 3px;
+      font-size: 12.4px;
+      line-height: 1.52;
+      text-align: justify;
+    }
+
+    .awards {
+      margin: 6px 0 0;
+      font-size: 12.8px;
+      line-height: 1.62;
+    }
+
+    .strong { font-weight: 800; }
+
+    @page { size: A4; margin: 0; }
+
+    @media print {
+      body { display: block; padding: 0; background: #fff; }
+      .page { box-shadow: none; }
+    }
+
+    @media (max-width: 900px) {
+      body { padding: 16px 8px 28px; }
+      .page { width: min(100%, var(--paper-w)); }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <svg class="wave" viewBox="0 0 794 1123" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="#e6e6e6" stroke-width="1">
+        <path d="M-45 60 C130 20 235 65 360 110 S590 90 840 205" />
+        <path d="M-45 68 C130 28 235 73 360 118 S590 98 840 213" />
+        <path d="M-45 76 C130 36 235 81 360 126 S590 106 840 221" />
+        <path d="M-45 84 C130 44 235 89 360 134 S590 114 840 229" />
+        <path d="M-45 92 C130 52 235 97 360 142 S590 122 840 237" />
+        <path d="M-45 100 C130 60 235 105 360 150 S590 130 840 245" />
+        <path d="M-45 108 C130 68 235 113 360 158 S590 138 840 253" />
+        <path d="M-45 116 C130 76 235 121 360 166 S590 146 840 261" />
+      </g>
+    </svg>
+
+    <div class="page-inner">
+      <header class="hero">
+        <div class="avatar" aria-label="头像占位"></div>
+        <h1>陈媛媛Abbey</h1>
+        <div class="contact">188-8888-8888&nbsp;&nbsp;|&nbsp;&nbsp;abbey@wondercv.com</div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">个人总结</h2>
+        <p class="summary">具备扎实的专业知识和较强的学习能力，在校期间积极参与各类实践项目，积累了丰富的项目经验。熟悉常用办公软件和数据分析工具，具备良好的沟通协调能力和团队合作精神。期望在目标岗位中承担有挑战性的工作，不断提升自身价值，为企业发展贡献力量。</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">工作经历</h2>
+        <div class="entry">
+          <div class="entry-head"><span>超级公司</span><span>2025年01月 - 2025年12月</span></div>
+          <div class="entry-sub"><span>实习生 市场部</span><span>北京</span></div>
+          <ul>
+            <li>参与市场调研，收集并分析行业数据，为市场策略制定提供支持。</li>
+            <li>协助组织线上线下营销活动，包括活动策划、宣传推广和效果评估。</li>
+            <li>负责社交媒体平台的日常运营，撰写并发布相关内容，提升品牌知名度。</li>
+            <li>协助完成部门内部行政事务，提高工作效率。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">项目经历</h2>
+        <div class="entry">
+          <div class="entry-head"><span>校园电商平台项目</span><span>2025年01月 - 2025年12月</span></div>
+          <div class="entry-sub"><span>项目助理</span><span>北京</span></div>
+          <ul>
+            <li>参与校园电商平台的搭建和运营，负责商品信息的整理和上传。</li>
+            <li>协助进行用户调研，了解用户需求，为平台优化提供建议。</li>
+            <li>参与营销活动的策划和执行，提升平台用户活跃度和销售额。</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><span>大学生创新创业项目</span><span>2025年01月 - 2025年12月</span></div>
+          <div class="entry-sub"><span>负责人</span><span>北京</span></div>
+          <ul>
+            <li>负责项目立项、团队组建和资金申请，确定项目方向和目标。</li>
+            <li>组织团队成员进行市场调研和需求分析，推动项目按计划顺利进行。</li>
+            <li>组织项目成果的展示和推广，提升项目影响力。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">社团和组织经历</h2>
+        <div class="entry">
+          <div class="entry-head"><span>学生会</span><span>2025年01月 - 2025年12月</span></div>
+          <div class="entry-sub"><span>干事 宣传部</span><span>北京</span></div>
+          <ul>
+            <li>负责学生会宣传活动策划和组织，包括海报设计、文案撰写和活动推广。</li>
+            <li>协助进行校园文化建设，营造积极向上的校园氛围。</li>
+            <li>参与学生会内部行政事务，提高协作效率。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">荣誉奖项</h2>
+        <div class="awards">国家励志奖学金<br>校级优秀学生干部<br>优秀志愿者</div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">其他</h2>
+        <ul>
+          <li><span class="strong">技能：</span>Office（精通），Python（熟练），数据分析（熟练），市场营销（了解）</li>
+          <li><span class="strong">语言：</span>CET-4，CET-6</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</body>
+</html>

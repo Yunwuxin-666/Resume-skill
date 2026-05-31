@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+node_modules/
+.venv/
+venv/
+__pycache__/
+
+*.tmp
+*.log
+
+# Generated resume outputs
+*-resume*.html
+*-resume*.pdf
+*-resume*.png
+preview-*.png
+li-zhuoyuan-resume-templates*.html
+li-zhuoyuan-resume-templates*.png
