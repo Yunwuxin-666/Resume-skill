@@ -1,4 +1,4 @@
-# Resume Skill / 简历.skill
+# Resume-Skill / 简历.skill
 
 > *Review like a strict interviewer. Rewrite like a consultant. Export a polished A4 resume in Chinese, English, bilingual, or other localized formats.*
 
